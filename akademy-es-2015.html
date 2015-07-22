@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>QVD - Virtualización de escritorios Linux</title>
+<meta name="author" content="(Salvador Fandiño)"/>
+
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+<link rel="stylesheet" href="./reveal.js/css/theme/night.css" id="theme"/>
+<link rel="stylesheet" href=""/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1>QVD - Virtualización de escritorios Linux</h1>
+<h2>Salvador Fandiño</h2>
+<h2><a href="mailto:salvador@qindel.com">salvador@qindel.com</a></h2>
+<h2></h2>
+</section>
+
+<section>
+<section id="slide-orgheadline1">
+<h2 id="orgheadline1">¿Quienes somos?</h2>
+
+<div class="figure">
+<p><img src="./images/qindelgroup.png" alt="qindelgroup.png" />
+</p>
+</div>
+
+<p>
+Empresa de consultoria informatica
+</p>
+
+<p>
+Especializada en Linux y FLOSS en general
+</p>
+
+<p>
+Trabajamos para grandes empresas como BBVA, Inditex, Vodafone, Worldpay y para muchas otras más pequeñas.
+</p>
+
+<p>
+Desarrollamos QVD
+</p>
+
+<p class="fragment (roll-in)">
+<b>Patrocinamos Akademy-es</b>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline4">
+<h2 id="orgheadline4">QVD</h2>
+<p>
+(insertar mariquita aquí)
+</p>
+
+<ul>
+<li>Plataforma de VDI</li>
+
+<li>100% software libre - GPL/AGPL 3</li>
+
+<li>Escritorios Linux: KDE, XFCE, LXDE, etc.</li>
+
+<li>Clientes para Linux, OS/X, MS-Windows, Android e iOS</li>
+
+<li>Escalable, granjas de hasta 8000 usuarios</li>
+
+<li>Muy eficiente (densidad de VMs)</li>
+
+<li>Self-healing</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline2">
+<h3 id="orgheadline2">QVD - Componentes</h3>
+<p>
+(añadir imagen con componentes)
+</p>
+
+<ul>
+<li>L7R  - Level7 Router, el broker</li>
+
+<li>HKD - House-Keeping Daemon</li>
+
+<li>WAT - Administración web</li>
+
+<li>DB</li>
+
+<li>NAS (NFS, CIFS)</li>
+
+<li>Cliente</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline3">
+<h3 id="orgheadline3">QVD - Tecnologías</h3>
+<ul>
+<li>KVM y LXC</li>
+
+<li>X-Windows + librerias nx.</li>
+
+<li>Sobre HTTPS</li>
+
+<li>PostgreSQL</li>
+
+<li>Perl y C</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline13">
+<h2 id="orgheadline13">¿KDE?</h2>
+<div class="outline-text-2" id="text-orgheadline13">
+</div></section>
+</section>
+<section>
+<section id="slide-orgheadline5">
+<h3 id="orgheadline5">KDE y QVD: Caso de exito</h3>
+<ul>
+<li>Nuestro mayor cliente BBVA/Bancomer usa KDE</li>
+
+<li>30K usuarios concurrentes</li>
+
+<li>KDE3</li>
+
+<li>Aplicaciones de ofimática, correo y navegador</li>
+
+<li>Kiosk</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline6">
+<h3 id="orgheadline6">KDE y QVD</h3>
+<ul>
+<li class="fragment roll-in">KDE3 - <b>ok</b></li>
+<li class="fragment roll-in">KDE4 - <b>ok</b></li>
+<li class="fragment roll-in">KDE5 - <b>fail</b></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline7">
+<h3 id="orgheadline7">Demo de KDE4 en QVD en 15s</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline8">
+<h3 id="orgheadline8">KDE5 - fail, ¿por que?</h3>
+<p class="fragment (roll-in)">
+El culpable: <b>¡nx!</b>
+</p>
+
+<ul class="fragment roll-in">
+<li>Fork de X-Windows 6.x</li>
+<li>Discontinuado por el creador (NoMachine)</li>
+<li>No se actualiza ni se incorporan nuevas funcionalidades</li>
+<li>Los escritorios modernos dependen de X-Windows 7.x, OpenGL, etc.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline9">
+<h3 id="orgheadline9">KDE5 - fail, pero&#x2026;</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline10">
+<h3 id="orgheadline10">Hay más peces en el mar</h3>
+<ul>
+<li>x2go
+<ul>
+<li>plataforma de SBC</li>
+<li>desarrollado en comunidad</li>
+
+</ul></li>
+
+<li>Arctica
+<ul>
+<li>Nuevo proyecto</li>
+<li>iniciado por algunos de los principales desarrolladores de x2go</li>
+<li>objetivo muy ambicioso</li>
+
+</ul></li>
+
+<li>y QVD</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline11">
+<h3 id="orgheadline11">x2go gathering</h3>
+<p>
+(Insertar foto del x2go gathering)
+</p>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline12">
+<h3 id="orgheadline12">x2go, Arctica y QVD</h3>
+<p>
+Colaboramos para:
+</p>
+
+<ul>
+<li>ser el nuevo upstream de nx</li>
+
+<li>WIP: deshacer el fork, reintegrar nx dentro de X.org</li>
+
+<li>WIP: nuevas funcionalidades (multimedia, OpenGL)</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline15">
+<h2 id="orgheadline15">El futuro</h2>
+<div class="outline-text-2" id="text-orgheadline15">
+</div></section>
+</section>
+<section>
+<section id="slide-orgheadline14">
+<h3 id="orgheadline14">El futuro es&#x2026;</h3>
+<ul>
+<li>El futuro es Wayland
+<ul>
+<li>&#x2026; lentamente</li>
+<li>&#x2026; digan lo que digan los de Ubuntu</li>
+
+</ul></li>
+
+<li>mejor que las X en casi todo</li>
+
+<li>no trae transparencia de red
+<ul>
+<li>darsela es mucho más difícil de lo que parece</li>
+<li>¿algún voluntario?</li>
+
+</ul></li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline21">
+<h2 id="orgheadline21">Pero&#x2026; ¡el futuro de verdad!</h2>
+<div class="outline-text-2" id="text-orgheadline21">
+</div></section>
+</section>
+<section>
+<section id="slide-orgheadline16">
+<h3 id="orgheadline16">El futuro de verdad</h3>
+<p>
+¿Cual va a ser la relevancia del escritorio Linux?
+</p>
+
+<p>
+¿Cual va a ser La relevancia del Software Libre?
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline17">
+<h3 id="orgheadline17">El futuro de verdad</h3>
+<ul>
+<li>Tablets, smartphones, etc. y las tiendas de aplicaciones.</li>
+<li>Aplicaciones colaborativas y en la nube
+<ul>
+<li>Google Docs</li>
+<li>Dropbox y co.</li>
+<li>Facebook</li>
+<li>Skype/Whatsup</li>
+<li>GitHub</li>
+
+</ul></li>
+<li>El "idílico" mundo de ARM</li>
+<li>etc.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline18">
+<h3 id="orgheadline18">El futuro de verdad</h3>
+<p>
+El escritorio es cada vez menos relevante, solo una puerta de entrada a la "nube"
+</p>
+
+<p>
+Software Libre: otra vez en la casilla cero.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline19">
+<h3 id="orgheadline19">El futuro de verdad: KDE</h3>
+<ul>
+<li>KDE ha sido siempre el proyecto rebelde</li>
+
+<li>De hackers para hackers</li>
+
+<li>De hackers para todo el mundo</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline20">
+<h3 id="orgheadline20">¿Que va a hacer KDE para seguir siendo relevante?</h3>
+</section>
+</section>
+</div>
+</div>
+
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: true,
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+]
+});
+</script>
+</body>
+</html>
