@@ -177,9 +177,9 @@ Colaboramos para:
 
 ¿Cual va a ser la relevancia del escritorio Linux?
 
-¿Cual va a ser La relevancia del Software Libre?
+¿Cual va a ser la relevancia del Software Libre?
 
-** Lo que se nos hecha encima
+** Lo que se nos echa encima
 
 - Tablets, smartphones, Google Chromebook, etc. y las tiendas de aplicaciones.
 - Aplicaciones colaborativas y en la nube
