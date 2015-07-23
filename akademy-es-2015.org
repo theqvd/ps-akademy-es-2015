@@ -4,13 +4,26 @@
 
 #+OPTIONS: toc:nil
 #+OPTIONS: num:nil
-#+REVEAL_THEME: night
+#+rREVEAL_THEME: night
 #+REVEAL_TRANS: linear
 #+REVEAL_HLEVEL: 2
+#+REVEAL_EXTRA_CSS: ./qindel.css
 
 * ¿Quienes somos?
 
   [[./images/qindelgroup.png]]
+
+  Compañía internacional con una fuerte especialización en el
+  desarrollo de proyectos con *Linux y FLOSS* en general con más de 17
+  años en el sector de las tecnologías de la información.
+
+#+ATTR_REVEAL: :frag (roll-in)
+  Estamos presentes en:
+
+#+ATTR_REVEAL: :frag (roll-in)
+  [[./images/banderas.png]]
+
+#+REVEAL: split
 
   Empresa de consultoria informatica
 
@@ -23,6 +36,23 @@
 #+ATTR_REVEAL: :frag (roll-in)
   *Patrocinamos Akademy-es*
   
+
+* ¿Quienes somos?
+
+Líneas de negocio de la Compañía:
+
+[[./images/qindel-lineas-negocio.png]]
+
+* Principales clientes
+
+[[./images/logo-bbva.png]]
+
+[[./images/logo-worldpay.png]]
+
+[[./images/logo-vodafone.png]]
+
+[[./images/logo-inditex.png]]
+
 * QVD
 
   (insertar mariquita aquí)
@@ -50,13 +80,13 @@
 
   - HKD - House-Keeping Daemon
 
-  - WAT - Administración web
-
   - DB
 
   - NAS (NFS, CIFS)
 
   - Cliente
+
+  - Administración (CLI, web, API)
 
 
 ** QVD - Tecnologías
@@ -74,8 +104,7 @@
 
 * ¿KDE?
 
-
-** KDE y QVD: Caso de exito
+** QVD+KDE: Caso de exito
 
 - Nuestro mayor cliente BBVA/Bancomer usa KDE
 
@@ -87,7 +116,11 @@
 
 - Kiosk
 
-** KDE y QVD
+#+REVEAL: split
+
+[[./images/captura-bbva.png]]
+
+** QVD+KDE
 
 #+ATTR_REVEAL: :frag (roll-in)
 - KDE3 - *ok*
@@ -96,7 +129,7 @@
 
 ** Demo de KDE4 en QVD en 15s
 
-** KDE5 - fail, ¿por que?
+** QVD+KDE5 *fail*, ¿por qué?
 
 #+ATTR_REVEAL: :frag (roll-in)
 El culpable: *¡nx!*
@@ -107,7 +140,7 @@ El culpable: *¡nx!*
   - No se actualiza ni se incorporan nuevas funcionalidades
   - Los escritorios modernos dependen de X-Windows 7.x, OpenGL, etc.
 
-** KDE5 - fail, pero...
+** QVD+KDE5 *fail*, pero...
 
 ** Hay más peces en el mar
 
@@ -116,9 +149,9 @@ El culpable: *¡nx!*
     - desarrollado en comunidad
 
 - Arctica
-    - Nuevo proyecto
+    - nuevo proyecto
     - iniciado por algunos de los principales desarrolladores de x2go
-    - objetivo muy ambicioso
+    - objetivos muy ambiciosos
 
 - y QVD
 
@@ -132,15 +165,18 @@ El culpable: *¡nx!*
 
 Colaboramos para:
 
-  - ser el nuevo upstream de nx
+  - nx
 
-  - WIP: deshacer el fork, reintegrar nx dentro de X.org
+      - ser el nuevo upstream
 
-  - WIP: nuevas funcionalidades (multimedia, OpenGL)
+      - WIP: deshacer el fork, reintegrar nx dentro de X.org
+
+      - WIP: nuevas funcionalidades (multimedia, OpenGL)
+
+  - Software auxiliar: SFTP, impresoras, etc.
 
 
 * El futuro
-
 
 ** El futuro es...
 
