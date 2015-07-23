@@ -4,7 +4,7 @@
 
 #+OPTIONS: toc:nil
 #+OPTIONS: num:nil
-#+rREVEAL_THEME: night
+#+REVEAL_THEME: qindel
 #+REVEAL_TRANS: linear
 #+REVEAL_HLEVEL: 2
 #+REVEAL_EXTRA_CSS: ./qindel.css
@@ -37,9 +37,7 @@
   *Patrocinamos Akademy-es*
   
 
-* ¿Quienes somos?
-
-Líneas de negocio de la Compañía:
+* Lineas de negocio
 
 [[./images/qindel-lineas-negocio.png]]
 
@@ -67,7 +65,9 @@ Líneas de negocio de la Compañía:
 
   - Escalable, granjas de hasta 8000 usuarios
 
-  - Muy eficiente (densidad de VMs)
+  - Muy eficiente
+     - densidad de VMs
+     - ancho de banda
 
   - Self-healing
 
