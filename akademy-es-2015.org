@@ -153,8 +153,9 @@ Colaboramos para:
 
       - WIP: nuevas funcionalidades (multimedia, OpenGL)
 
-  - Software auxiliar: SFTP, impresoras, etc.
+  - Software auxiliar: SFTP, impresoras, clientes de Windows, etc.
 
+  - Soportar escritorios modernos como KDE5
 
 * El futuro
 
