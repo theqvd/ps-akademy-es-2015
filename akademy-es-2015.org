@@ -1,5 +1,6 @@
-#+Title: QVD - Virtualización de escritorios Linux
-#+Author: Salvador Fandiño
+#+Title: Mi escritorio KDE virtual
+
+#+Author: Cesar de la Hoz, Salvador Fandiño
 #+Email: salvador@qindel.com
 
 #+OPTIONS: toc:nil
@@ -13,35 +14,21 @@
 
   [[./images/qindelgroup.png]]
 
-  Compañía internacional con una fuerte especialización en el
-  desarrollo de proyectos con *Linux y FLOSS* en general con más de 17
-  años en el sector de las tecnologías de la información.
+  Compañía internacional de TI especializada en el desarrollo de
+  proyectos con *Linux y FLOSS*, con más de 17 años en los sectores de
+  telco, banca y retail.
 
 #+ATTR_REVEAL: :frag (roll-in)
-  Estamos presentes en:
+  Con oficinas en:
 
 #+ATTR_REVEAL: :frag (roll-in)
   [[./images/banderas.png]]
 
-#+REVEAL: split
-
-  Empresa de consultoria informatica
-
-  Especializada en Linux y FLOSS en general
-  
-  Trabajamos para grandes empresas como BBVA, Inditex, Vodafone, Worldpay y para muchas otras más pequeñas.
-
-  Desarrollamos QVD
-
-#+ATTR_REVEAL: :frag (roll-in)
-  *Patrocinamos Akademy-es*
-  
-
-* Lineas de negocio
+** Lineas de negocio
 
 [[./images/qindel-lineas-negocio.png]]
 
-* Principales clientes
+** Principales clientes
 
 [[./images/logo-bbva.png]]
 
@@ -51,43 +38,44 @@
 
 [[./images/logo-inditex.png]]
 
-* QVD
+* QVD - Quality Virtual Desktop
 
-  (insertar mariquita aquí)
+#+REVEAL_HTML: <video controls data-autoplay class="stretch"><source data-src="./images/QVD.mp4" type="video/mp4" /></video>
 
-  - Plataforma de VDI
+** QVD - Características
 
-  - 100% software libre - GPL/AGPL 3
+  - VDI de alta densidad para Linux
+  - Consumo mínimo de ancho de banda
+  - Mínimos requisitos de hardware
+  - Mayor seguridad de los escritorios
+  - Alta concurrencia de usuarios remotos
+  - Accesible desde PCs, tablets y smartphones
 
-  - Escritorios Linux: KDE, XFCE, LXDE, etc.
+** QVD - Arquitectura
 
-  - Clientes para Linux, OS/X, MS-Windows, Android e iOS
+#+REVEAL_HTML: <img align="right" width="40%" src="./images/arquitectura-1.png"/>
 
-  - Escalable, granjas de hasta 8000 usuarios
+  - Cliente
 
-  - Muy eficiente
-     - densidad de VMs
-     - ancho de banda
+  - LB
 
-  - Self-healing
+  - Nodos
 
+    - L7R: Level7 Router
 
-** QVD - Componentes
+    - HKD: House-Keeping Daemon
 
-  (añadir imagen con componentes)
+    - VM: Virtual Machine
 
-  - L7R  - Level7 Router, el broker
+        - VMA: Agent
 
-  - HKD - House-Keeping Daemon
+        - Escritorio
 
   - DB
 
   - NAS (NFS, CIFS)
 
-  - Cliente
-
   - Administración (CLI, web, API)
-
 
 ** QVD - Tecnologías
 
@@ -95,12 +83,9 @@
 
   - X-Windows + librerias nx.
   
-  - Sobre HTTPS
-
   - PostgreSQL
 
   - Perl y C
-
 
 * ¿KDE?
 
@@ -120,7 +105,7 @@
 
 [[./images/captura-bbva.png]]
 
-** QVD+KDE
+** QVD+KDE - Probando...
 
 #+ATTR_REVEAL: :frag (roll-in)
 - KDE3 - *ok*
@@ -140,26 +125,21 @@ El culpable: *¡nx!*
   - No se actualiza ni se incorporan nuevas funcionalidades
   - Los escritorios modernos dependen de X-Windows 7.x, OpenGL, etc.
 
-** QVD+KDE5 *fail*, pero...
+** Hay más peces en el mar...
 
-** Hay más peces en el mar
-
+#+ATTR_REVEAL: :frag (roll-in)
 - x2go
     - plataforma de SBC
     - desarrollado en comunidad
-
 - Arctica
     - nuevo proyecto
     - iniciado por algunos de los principales desarrolladores de x2go
     - objetivos muy ambiciosos
-
-- y QVD
+- y nosotros, QVD
 
 ** x2go gathering
 
-(Insertar foto del x2go gathering)
-
-
+#+REVEAL_HTML: <img class="stretch" src="./images/x2go-gathering.jpeg">
 
 ** x2go, Arctica y QVD
 
@@ -191,17 +171,17 @@ Colaboramos para:
     - ¿algún voluntario?
 
 
-* Pero... ¡el futuro de verdad!
+* Pero... el futuro, ¡futuro!
 
-** El futuro de verdad
+** El futuro, ¡futuro!
 
 ¿Cual va a ser la relevancia del escritorio Linux?
 
 ¿Cual va a ser La relevancia del Software Libre?
 
-** El futuro de verdad
+** Lo que se nos hecha encima
 
-- Tablets, smartphones, etc. y las tiendas de aplicaciones.
+- Tablets, smartphones, Google Chromebook, etc. y las tiendas de aplicaciones.
 - Aplicaciones colaborativas y en la nube
      - Google Docs
      - Dropbox y co.
@@ -211,15 +191,15 @@ Colaboramos para:
 - El "idílico" mundo de ARM
 - etc.
 
-** El futuro de verdad
+** Nubarrones
 
-El escritorio es cada vez menos relevante, solo una puerta de entrada a la "nube"
+El escritorio: cada vez menos relevante, solo una puerta de entrada a la "nube"
 
 Software Libre: otra vez en la casilla cero.
 
-** El futuro de verdad: KDE
+** KDE, proyecto rebelde
 
-- KDE ha sido siempre el proyecto rebelde
+- Sin miedo a innovar
 
 - De hackers para hackers
 
@@ -227,3 +207,10 @@ Software Libre: otra vez en la casilla cero.
 
 ** ¿Que va a hacer KDE para seguir siendo relevante?
 
+* Gracias
+
+Cesar de la Hoz <cdelahoz@qindel.com>
+
+Salvador Fandiño <salvador@qindel.com>
+
+[[http://theqvd.com][The QVD]]

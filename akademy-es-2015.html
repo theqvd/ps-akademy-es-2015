@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>QVD - Virtualización de escritorios Linux</title>
-<meta name="author" content="(Salvador Fandiño)"/>
+<title>Mi escritorio KDE virtual</title>
+<meta name="author" content="(Cesar de la Hoz, Salvador Fandiño)"/>
 
 <link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
 <link rel="stylesheet" href="./reveal.js/css/theme/qindel.css" id="theme"/>
@@ -24,15 +24,15 @@
 <div class="reveal">
 <div class="slides">
 <section id="sec-title-slide">
-<h1>QVD - Virtualización de escritorios Linux</h1>
-<h2>Salvador Fandiño</h2>
+<h1>Mi escritorio KDE virtual</h1>
+<h2>Cesar de la Hoz, Salvador Fandiño</h2>
 <h2><a href="mailto:salvador@qindel.com">salvador@qindel.com</a></h2>
 <h2></h2>
 </section>
 
 <section>
-<section id="slide-orgheadline1">
-<h2 id="orgheadline1">¿Quienes somos?</h2>
+<section id="slide-orgheadline3">
+<h2 id="orgheadline3">¿Quienes somos?</h2>
 
 <div class="figure">
 <p><img src="./images/qindelgroup.png" alt="qindelgroup.png" />
@@ -40,13 +40,13 @@
 </div>
 
 <p>
-Compañía internacional con una fuerte especialización en el
-desarrollo de proyectos con <b>Linux y FLOSS</b> en general con más de 17
-años en el sector de las tecnologías de la información.
+Compañía internacional de TI especializada en el desarrollo de
+proyectos con <b>Linux y FLOSS</b>, con más de 17 años en los sectores de
+telco, banca y retail.
 </p>
 
 <p class="fragment (roll-in)">
-Estamos presentes en:
+Con oficinas en:
 </p>
 
 
@@ -56,34 +56,10 @@ Estamos presentes en:
 </div>
 
 </section>
-<section>
-
-<p>
-Empresa de consultoria informatica
-</p>
-
-<p>
-Especializada en Linux y FLOSS en general
-</p>
-
-<p>
-Trabajamos para grandes empresas como BBVA, Inditex, Vodafone, Worldpay y para muchas otras más pequeñas.
-</p>
-
-<p>
-Desarrollamos QVD
-</p>
-
-<p class="fragment (roll-in)">
-<b>Patrocinamos Akademy-es</b>
-</p>
-
-
-</section>
 </section>
 <section>
-<section id="slide-orgheadline2">
-<h2 id="orgheadline2">Lineas de negocio</h2>
+<section id="slide-orgheadline1">
+<h3 id="orgheadline1">Lineas de negocio</h3>
 
 <div class="figure">
 <p><img src="./images/qindel-lineas-negocio.png" alt="qindel-lineas-negocio.png" />
@@ -93,8 +69,8 @@ Desarrollamos QVD
 </section>
 </section>
 <section>
-<section id="slide-orgheadline3">
-<h2 id="orgheadline3">Principales clientes</h2>
+<section id="slide-orgheadline2">
+<h3 id="orgheadline2">Principales clientes</h3>
 
 <div class="figure">
 <p><img src="./images/logo-bbva.png" alt="logo-bbva.png" />
@@ -122,78 +98,78 @@ Desarrollamos QVD
 </section>
 </section>
 <section>
-<section id="slide-orgheadline6">
-<h2 id="orgheadline6">QVD</h2>
-<p>
-(insertar mariquita aquí)
-</p>
-
-<ul>
-<li>Plataforma de VDI</li>
-
-<li>100% software libre - GPL/AGPL 3</li>
-
-<li>Escritorios Linux: KDE, XFCE, LXDE, etc.</li>
-
-<li>Clientes para Linux, OS/X, MS-Windows, Android e iOS</li>
-
-<li>Escalable, granjas de hasta 8000 usuarios</li>
-
-<li>Muy eficiente
-<ul>
-<li>densidad de VMs</li>
-<li>ancho de banda</li>
-
-</ul></li>
-
-<li>Self-healing</li>
-
-</ul>
-
+<section id="slide-orgheadline7">
+<h2 id="orgheadline7">QVD - Quality Virtual Desktop</h2>
+<video controls data-autoplay class="stretch"><source data-src="./images/QVD.mp4" type="video/mp4" /></video>
 
 </section>
 </section>
 <section>
 <section id="slide-orgheadline4">
-<h3 id="orgheadline4">QVD - Componentes</h3>
-<p>
-(añadir imagen con componentes)
-</p>
-
+<h3 id="orgheadline4">QVD - Características</h3>
 <ul>
-<li>L7R  - Level7 Router, el broker</li>
-
-<li>HKD - House-Keeping Daemon</li>
-
-<li>DB</li>
-
-<li>NAS (NFS, CIFS)</li>
-
-<li>Cliente</li>
-
-<li>Administración (CLI, web, API)</li>
+<li>VDI de alta densidad para Linux</li>
+<li>Consumo mínimo de ancho de banda</li>
+<li>Mínimos requisitos de hardware</li>
+<li>Mayor seguridad de los escritorios</li>
+<li>Alta concurrencia de usuarios remotos</li>
+<li>Accesible desde PCs, tablets y smartphones</li>
 
 </ul>
-
 
 </section>
 </section>
 <section>
 <section id="slide-orgheadline5">
-<h3 id="orgheadline5">QVD - Tecnologías</h3>
+<h3 id="orgheadline5">QVD - Arquitectura</h3>
+<img align="right" width="40%" src="./images/arquitectura-1.png"/>
+
+<ul>
+<li>Cliente</li>
+
+<li>LB</li>
+
+<li>Nodos
+
+<ul>
+<li>L7R: Level7 Router</li>
+
+<li>HKD: House-Keeping Daemon</li>
+
+<li>VM: Virtual Machine
+
+<ul>
+<li>VMA: Agent</li>
+
+<li>Escritorio</li>
+
+</ul></li>
+
+</ul></li>
+
+<li>DB</li>
+
+<li>NAS (NFS, CIFS)</li>
+
+<li>Administración (CLI, web, API)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline6">
+<h3 id="orgheadline6">QVD - Tecnologías</h3>
 <ul>
 <li>KVM y LXC</li>
 
 <li>X-Windows + librerias nx.</li>
-
-<li>Sobre HTTPS</li>
 
 <li>PostgreSQL</li>
 
 <li>Perl y C</li>
 
 </ul>
-
 
 </section>
 </section>
@@ -204,8 +180,8 @@ Desarrollamos QVD
 </div></section>
 </section>
 <section>
-<section id="slide-orgheadline7">
-<h3 id="orgheadline7">QVD+KDE: Caso de exito</h3>
+<section id="slide-orgheadline8">
+<h3 id="orgheadline8">QVD+KDE: Caso de exito</h3>
 <ul>
 <li>Nuestro mayor cliente BBVA/Bancomer usa KDE</li>
 
@@ -231,8 +207,8 @@ Desarrollamos QVD
 </section>
 </section>
 <section>
-<section id="slide-orgheadline8">
-<h3 id="orgheadline8">QVD+KDE</h3>
+<section id="slide-orgheadline9">
+<h3 id="orgheadline9">QVD+KDE - Probando&#x2026;</h3>
 <ul>
 <li class="fragment roll-in">KDE3 - <b>ok</b></li>
 <li class="fragment roll-in">KDE4 - <b>ok</b></li>
@@ -243,14 +219,14 @@ Desarrollamos QVD
 </section>
 </section>
 <section>
-<section id="slide-orgheadline9">
-<h3 id="orgheadline9">Demo de KDE4 en QVD en 15s</h3>
+<section id="slide-orgheadline10">
+<h3 id="orgheadline10">Demo de KDE4 en QVD en 15s</h3>
 
 </section>
 </section>
 <section>
-<section id="slide-orgheadline10">
-<h3 id="orgheadline10">QVD+KDE5 <b>fail</b>, ¿por qué?</h3>
+<section id="slide-orgheadline11">
+<h3 id="orgheadline11">QVD+KDE5 <b>fail</b>, ¿por qué?</h3>
 <p class="fragment (roll-in)">
 El culpable: <b>¡nx!</b>
 </p>
@@ -266,31 +242,23 @@ El culpable: <b>¡nx!</b>
 </section>
 </section>
 <section>
-<section id="slide-orgheadline11">
-<h3 id="orgheadline11">QVD+KDE5 <b>fail</b>, pero&#x2026;</h3>
-
-</section>
-</section>
-<section>
 <section id="slide-orgheadline12">
-<h3 id="orgheadline12">Hay más peces en el mar</h3>
+<h3 id="orgheadline12">Hay más peces en el mar&#x2026;</h3>
 <ul>
-<li>x2go
+<li class="fragment roll-in">x2go
 <ul>
 <li>plataforma de SBC</li>
 <li>desarrollado en comunidad</li>
 
 </ul></li>
-
-<li>Arctica
+<li class="fragment roll-in">Arctica
 <ul>
 <li>nuevo proyecto</li>
 <li>iniciado por algunos de los principales desarrolladores de x2go</li>
 <li>objetivos muy ambiciosos</li>
 
 </ul></li>
-
-<li>y QVD</li>
+<li class="fragment roll-in">y nosotros, QVD</li>
 
 </ul>
 
@@ -299,11 +267,7 @@ El culpable: <b>¡nx!</b>
 <section>
 <section id="slide-orgheadline13">
 <h3 id="orgheadline13">x2go gathering</h3>
-<p>
-(Insertar foto del x2go gathering)
-</p>
-
-
+<img class="stretch" src="./images/x2go-gathering.jpeg">
 
 </section>
 </section>
@@ -366,13 +330,13 @@ Colaboramos para:
 </section>
 <section>
 <section id="slide-orgheadline23">
-<h2 id="orgheadline23">Pero&#x2026; ¡el futuro de verdad!</h2>
+<h2 id="orgheadline23">Pero&#x2026; el futuro, ¡futuro!</h2>
 <div class="outline-text-2" id="text-orgheadline23">
 </div></section>
 </section>
 <section>
 <section id="slide-orgheadline18">
-<h3 id="orgheadline18">El futuro de verdad</h3>
+<h3 id="orgheadline18">El futuro, ¡futuro!</h3>
 <p>
 ¿Cual va a ser la relevancia del escritorio Linux?
 </p>
@@ -385,9 +349,9 @@ Colaboramos para:
 </section>
 <section>
 <section id="slide-orgheadline19">
-<h3 id="orgheadline19">El futuro de verdad</h3>
+<h3 id="orgheadline19">Lo que se nos hecha encima</h3>
 <ul>
-<li>Tablets, smartphones, etc. y las tiendas de aplicaciones.</li>
+<li>Tablets, smartphones, Google Chromebook, etc. y las tiendas de aplicaciones.</li>
 <li>Aplicaciones colaborativas y en la nube
 <ul>
 <li>Google Docs</li>
@@ -406,9 +370,9 @@ Colaboramos para:
 </section>
 <section>
 <section id="slide-orgheadline20">
-<h3 id="orgheadline20">El futuro de verdad</h3>
+<h3 id="orgheadline20">Nubarrones</h3>
 <p>
-El escritorio es cada vez menos relevante, solo una puerta de entrada a la "nube"
+El escritorio: cada vez menos relevante, solo una puerta de entrada a la "nube"
 </p>
 
 <p>
@@ -419,9 +383,9 @@ Software Libre: otra vez en la casilla cero.
 </section>
 <section>
 <section id="slide-orgheadline21">
-<h3 id="orgheadline21">El futuro de verdad: KDE</h3>
+<h3 id="orgheadline21">KDE, proyecto rebelde</h3>
 <ul>
-<li>KDE ha sido siempre el proyecto rebelde</li>
+<li>Sin miedo a innovar</li>
 
 <li>De hackers para hackers</li>
 
@@ -434,6 +398,23 @@ Software Libre: otra vez en la casilla cero.
 <section>
 <section id="slide-orgheadline22">
 <h3 id="orgheadline22">¿Que va a hacer KDE para seguir siendo relevante?</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline24">
+<h2 id="orgheadline24">Gracias</h2>
+<p>
+Cesar de la Hoz &lt;cdelahoz@qindel.com&gt;
+</p>
+
+<p>
+Salvador Fandiño &lt;salvador@qindel.com&gt;
+</p>
+
+<p>
+<a href="http://theqvd.com/">The QVD</a>
+</p>
 </section>
 </section>
 </div>
